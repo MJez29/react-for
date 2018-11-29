@@ -1,0 +1,23 @@
+{
+  "name": "react-for",
+  "version": "1.0.0",
+  "description": "A for-loop React DOM element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "for",
+    "loop",
+    "react",
+    "dom"
+  ],
+  "author": "michal.g.jez@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.7.8",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
