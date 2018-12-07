@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { RenderArray } from './render-array';
-import { ForProps } from './for';
 
-interface ForInProps extends ForProps {}
+interface ForInProps {
+  from: any[];
+  children: (x: any) => React.Component<any, any>;
+}
 
 /**
  * `ForIn` implements looping through the provided elements using a `for...in` loop.
