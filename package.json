@@ -4,7 +4,8 @@
   "description": "A for-loop React DOM element",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "prepare": "npm run build",
+    "build": "node scripts/clear-lib.js && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,9 @@
   ],
   "author": "michal.g.jez@gmail.com",
   "license": "ISC",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@types/react": "^16.7.8",
     "@types/react-dom": "^16.0.11",
