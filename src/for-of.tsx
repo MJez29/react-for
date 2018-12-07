@@ -2,6 +2,8 @@ import * as React from 'react';
 import { RenderArray } from './render-array';
 import { ForProps } from './for';
 
+interface ForOfProps extends ForProps {}
+
 /**
  * `ForOf` implements looping through the provided elements using a `for...of` loop.
  * It iterates over the data that an iterable object defines to be iterable over.
@@ -12,7 +14,7 @@ import { ForProps } from './for';
  *   (i) => <h1>{i}</h1>
  * }</ForOf>
  */
-export const ForOf = ({ from, children }: ForProps) => {
+export const ForOf = ({ from, children }: ForOfProps) => {
   const results = [];
   for (const item of from) {
     results.push(children(item));
