@@ -3,8 +3,14 @@ import { RenderArray } from './render-array';
 import { ForProps } from './for';
 
 /**
- * 
- * @param { ForProps } props
+ * `ForOf` implements looping through the provided elements using a `for...of` loop.
+ * It iterates over the data that an iterable object defines to be iterable over.
+ * See {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of|here}
+ * for more detail.
+ * @example
+ * <ForOf i from={[ 1, 2, 3 ]}>{
+ *   (i) => <h1>{i}</h1>
+ * }</ForOf>
  */
 export const ForOf = ({ from, children }: ForProps) => {
   const results = [];
