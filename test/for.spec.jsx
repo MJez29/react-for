@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() });
 import { For } from '../lib';
 
 describe('<For />', () => {
-  it('Loops properly', () => {
+  it('Loops through a range', () => {
     const wrapper = render(
       <For start={0} comparator={(i) => i < 5} next={i => i + 1}>{
         (i) => <h1 className="for">{i}</h1>
