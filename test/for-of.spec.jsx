@@ -7,7 +7,7 @@ configure({ adapter: new Adapter() });
 import { ForOf } from '../lib';
 
 describe('<ForOf />', () => {
-  it('Loops though an array', () => {
+  it('Loops through an array', () => {
     const data = [ 1, 2, 3, 4, 5 ];
     const component = (
       <ForOf i from={data}>{
@@ -21,7 +21,7 @@ describe('<ForOf />', () => {
     expect(s.html()).to.equal('<h1>1</h1><h1>2</h1><h1>3</h1><h1>4</h1><h1>5</h1>');
   });
 
-  it('Loops though a string', () => {
+  it('Loops through a string', () => {
     const data = 'react-for';
     const component = (
       <ForOf i from={data}>{
@@ -61,5 +61,19 @@ describe('<ForOf />', () => {
 
     const s = shallow(component);
     expect(s.html()).to.equal('<h1>a: 1</h1><h1>b: 2</h1><h1>c: 3</h1>');
-  })
+  });
+
+  it('Loops through a Set', () => {
+    const data = new Set([1, 1, 2, 3, 3, 4, 4, 5]);
+    const component = (
+      <ForOf e from={data}>{
+        (e) => <h1>{e}</h1>
+      }</ForOf>
+    );
+    const r = render(component);
+    expect(r).to.have.lengthOf(5);
+
+    const s = shallow(component);
+    expect(s.html()).to.equal('<h1>1</h1><h1>2</h1><h1>3</h1><h1>4</h1><h1>5</h1>');
+  });
 })
