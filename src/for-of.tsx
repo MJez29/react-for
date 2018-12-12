@@ -1,7 +1,7 @@
 import * as React from "react";
 import { RenderArray } from "./render-array";
 
-interface ForOfProps {
+interface IForOfProps {
   from: any[];
   children: (x: any) => React.Component<any, any>;
 }
@@ -16,7 +16,7 @@ interface ForOfProps {
  *   (i) => <h1>{i}</h1>
  * }</ForOf>
  */
-export const ForOf = ({ from, children }: ForOfProps) => {
+export const ForOf = ({ from, children }: IForOfProps) => {
   const results = [];
   for (const item of from) {
     results.push(children(item));
