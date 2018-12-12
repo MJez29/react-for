@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { RenderArray } from './render-array';
+import * as React from "react";
+import { RenderArray } from "./render-array";
 
-export interface ForProps {
+export interface IForProps {
   /**
    * The starting value of the loop.
    */
@@ -19,7 +19,7 @@ export interface ForProps {
   children: (x: any) => React.Component<any, any>;
 }
 
-export const For = ({ start, comparator, next, children }: ForProps) => {
+export const For = ({ start, comparator, next, children }: IForProps) => {
   const results = [];
   for (let i = start; comparator(i); i = next(i)) {
     results.push(children(i));

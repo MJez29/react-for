@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { RenderArray } from './render-array';
+import * as React from "react";
+import { RenderArray } from "./render-array";
 
 interface ForOfProps {
   from: any[];

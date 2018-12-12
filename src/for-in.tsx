@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { RenderArray } from './render-array';
+import * as React from "react";
+import { RenderArray } from "./render-array";
 
-interface ForInProps {
+interface IForInProps {
   from: any[];
   children: (x: any) => React.Component<any, any>;
 }
@@ -16,10 +16,12 @@ interface ForInProps {
  *   (i) => <h1>{i}</h1>
  * }</ForIn>
  */
-export const ForIn = ({ from, children }: ForInProps) => {
+export const ForIn = ({ from, children }: IForInProps) => {
   const results = [];
   for (const item in from) {
-    results.push(children(item));
+    if (from.hasOwnProperty) {
+      results.push(children(item));
+    }
   }
 
   return <RenderArray array={results} />;
