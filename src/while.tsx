@@ -2,13 +2,16 @@ import * as React from "react";
 import { RenderArray } from "./render-array";
 import { WhileProps, parseWhileProps } from "./while-props";
 
-
+/**
+ * A while loop
+ * @param { WhileProps } x
+ */
 export const While = (x: WhileProps) => {
-  const [ comparator ] = parseWhileProps(x);
+  const { compare, render } = parseWhileProps(x);
 
   const results = [];
-  while (comparator()) {
-    results.push(children());
+  while (compare()) {
+    results.push(render());
   }
 
   return <RenderArray array={results} />;

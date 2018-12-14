@@ -1,4 +1,4 @@
-import { RenderProps } from "./render-props";
+import { RenderProps, RenderFunction, parseRenderProps } from "./render-props";
 
 type CompareFunction = () => any;
 
@@ -26,14 +26,30 @@ function isWhileCompare(x: WhileProps): x is IWhileCompare & RenderProps<void> {
   return (x as IWhileCompare).compare !== undefined;
 }
 
-export type WhileProps = RenderProps<void> & (IWhileTest | IWhileComparator | IWhileCompare);
+export type WhileProps = RenderProps & (IWhileTest | IWhileComparator | IWhileCompare);
 
-export function parseWhileProps(props: WhileProps): [ CompareFunction ] {
+export interface IParsedWhileProps {
+  compare: CompareFunction;
+  render: RenderFunction;
+}
+
+/**
+ * Parses the props for a while loop
+ * @param props - The props to parse
+ */
+export function parseWhileProps(props: WhileProps): IParsedWhileProps {
+  const parsedProps: IParsedWhileProps = {
+    compare: null,
+    ...parseRenderProps(props),
+  };
+
   if (isWhileTest(props)) {
-    return [ props.test ];
+    parsedProps.compare = props.test;
   } else if (isWhileCompare(props)) {
-    return [ props.compare ];
+    parsedProps.compare = props.compare;
   } else {
-    return [ props.comparator ];
+    parsedProps.compare = props.comparator;
   }
+
+  return parsedProps;
 }

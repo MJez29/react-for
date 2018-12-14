@@ -1,9 +1,33 @@
+export type RenderFunction<T = void> = (x?: T) => any;
+
 interface IRenderChildren<T> {
-  children: (x: T) => React.Component<any, any>;
+  children: RenderFunction<T>;
+}
+
+function isRenderChildren<T>(x: RenderProps<T>): x is IRenderChildren<T> {
+  return (x as IRenderChildren<T>).children !== undefined;
 }
 
 interface IRenderFunction<T> {
-  render: (x: T) => React.Component<any, any>;
+  render: RenderFunction<T>;
 }
 
-export type RenderProps<T> = IRenderChildren<T> | IRenderFunction<T>;
+export type RenderProps<T = void> = IRenderChildren<T> | IRenderFunction<T>;
+
+export interface IParsedRenderProps<T> {
+  render: RenderFunction<T>;
+}
+
+export function parseRenderProps<T>(props: RenderProps<T>): IParsedRenderProps<T> {
+  const parsedProps: IParsedRenderProps<T> = {
+    render: null,
+  };
+
+  if (isRenderChildren(props)) {
+    parsedProps.render = props.children;
+  } else {
+    parsedProps.render = props.render;
+  }
+
+  return parsedProps;
+}
