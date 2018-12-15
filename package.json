@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "node scripts/clear-lib.js && tsc",
-    "test": "mocha --require babel-core/register ./test/**/*.spec.jsx",
+    "test": "mocha --require babel-core/register --require ./scripts/configure-adapter.js ./test/**/*.spec.jsx",
     "tests": "npm run build && npm run test"
   },
   "keywords": [
@@ -34,6 +34,7 @@
     "react-dom": "^16.6.3",
     "sinon": "^7.1.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.2.2"
+    "typescript": "^3.2.2",
+    "@types/mocha": "^5.2.5"
   }
 }

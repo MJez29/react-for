@@ -4,7 +4,7 @@ import { WhileProps, parseWhileProps } from "./while-props";
 
 /**
  * A while loop
- * @param { WhileProps } x
+ * @param { { test: any, compare: any } } x
  */
 export const While = (x: WhileProps) => {
   const { compare, render } = parseWhileProps(x);

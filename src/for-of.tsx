@@ -2,7 +2,7 @@ import * as React from "react";
 import { RenderArray } from "./render-array";
 
 interface IForOfProps {
-  from: any[];
+  from: { [Symbol.iterator]: any };
   children: (x: any) => React.Component<any, any>;
 }
 
