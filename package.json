@@ -7,7 +7,10 @@
     "prepare": "npm run build",
     "build": "node scripts/clear-lib.js && tsc",
     "test": "mocha --require babel-core/register --require ./scripts/configure-adapter.js ./test/**/*.spec.jsx",
-    "tests": "npm run build && npm run test"
+    "tests": "npm run build && npm run test",
+    "lint:src": "tslint -c tslint.json 'src/**/*.tsx'",
+    "lint:test": "tslint -c tslint.json 'test/**/*.jsx'",
+    "lint": "npm run lint:src && npm run lint:test"
   },
   "keywords": [
     "for",
@@ -21,6 +24,7 @@
     "lib"
   ],
   "devDependencies": {
+    "@types/mocha": "^5.2.5",
     "@types/react": "^16.7.8",
     "@types/react-dom": "^16.0.11",
     "babel-core": "^6.26.3",
@@ -34,7 +38,8 @@
     "react-dom": "^16.6.3",
     "sinon": "^7.1.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.2.2",
-    "@types/mocha": "^5.2.5"
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.2"
   }
 }
