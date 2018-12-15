@@ -1,3 +1,4 @@
+// @ts-check
 // tslint:disable:max-line-length
 import * as React from "react";
 import { expect } from "chai";
