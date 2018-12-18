@@ -1,9 +1,17 @@
 import * as React from "react";
 import { RenderArray } from "./render-array";
+import { RenderProps, parseRenderProps, IParsedRenderProps } from "./render-props";
+import { DataProps, parseDataProps, IParsedDataProps } from "./data-props";
 
-interface IForOfProps {
-  from: { [Symbol.iterator]: any };
-  children: (x: any) => React.Component<any, any>;
+export type ForOfProps<T> = RenderProps<T> & DataProps<{ [Symbol.iterator]: () => T }>;
+
+type IParsedForOfProps<T> = IParsedRenderProps<T> & IParsedDataProps<any>;
+
+function parseForOfProps<T>(props: ForOfProps<T>): IParsedForOfProps<T> {
+  return {
+    ...parseDataProps(props),
+    ...parseRenderProps<T>(props),
+  };
 }
 
 /**
@@ -16,10 +24,12 @@ interface IForOfProps {
  *   (i) => <h1>{i}</h1>
  * }</ForOf>
  */
-export const ForOf = ({ from, children }: IForOfProps) => {
+export const ForOf = <T extends {}>(props: ForOfProps<T>) => {
+  const { data, render } = parseForOfProps(props);
+
   const results = [];
-  for (const item of from) {
-    results.push(children(item));
+  for (const item of data) {
+    results.push(render(item));
   }
 
   return <RenderArray array={results} />;

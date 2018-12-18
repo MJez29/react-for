@@ -9,7 +9,7 @@ describe("<ForOf />", () => {
   it("Loops through an array", () => {
     const data = [ 1, 2, 3, 4, 5 ];
     const component = (
-      <ForOf i from={data}>{
+      <ForOf from={data}>{
         (i) => <h1>{i}</h1>
       }</ForOf>
     );
@@ -23,7 +23,7 @@ describe("<ForOf />", () => {
   it("Loops through a string", () => {
     const data = "react-for";
     const component = (
-      <ForOf i from={data}>{
+      <ForOf from={data}>{
         (i) => <h1>{i}</h1>
       }</ForOf>
     );
