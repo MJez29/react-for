@@ -1,7 +1,7 @@
 // @ts-check
 import * as React from "react";
 import { expect } from "chai";
-import { shallow, configure, render, mount } from "enzyme";
+import { render } from "enzyme";
 import { For } from "../lib";
 
 describe("<For />", () => {

@@ -37,7 +37,7 @@ describe("<ForOf />", () => {
   it("Loops through a TypedArray", () => {
     const data = new Uint8Array([ 0x00, 0xFF ]);
     const component = (
-      <ForOf i from={data}>{
+      <ForOf from={data}>{
         (i) => <h1>{i}</h1>
       }</ForOf>
     );
@@ -65,7 +65,7 @@ describe("<ForOf />", () => {
   it("Loops through a Set", () => {
     const data = new Set([1, 1, 2, 3, 3, 4, 4, 5]);
     const component = (
-      <ForOf e from={data}>{
+      <ForOf from={data}>{
         (e) => <h1>{e}</h1>
       }</ForOf>
     );
