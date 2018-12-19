@@ -1,9 +1,17 @@
 import * as React from "react";
 import { RenderArray } from "./render-array";
+import { RenderProps, IParsedRenderProps, parseRenderProps } from "./render-props";
+import { DataProps, IParsedDataProps, parseDataProps } from "./data-props";
 
-interface IForInProps {
-  from: any[];
-  children: (x: any) => React.Component<any, any>;
+export type ForInProps = RenderProps<string> & DataProps<{ [x: string]: any }>;
+
+type ParsedForInProps = IParsedRenderProps<string> & IParsedDataProps<{ [x: string]: any }>;
+
+function parseForInProps(props: ForInProps): ParsedForInProps {
+  return {
+    ...parseDataProps(props),
+    ...parseRenderProps<string>(props),
+  };
 }
 
 /**
@@ -16,11 +24,13 @@ interface IForInProps {
  *   (i) => <h1>{i}</h1>
  * }</ForIn>
  */
-export const ForIn = ({ from, children }: IForInProps) => {
+export const ForIn = (props: ForInProps) => {
+  const { data, render } = parseForInProps(props);
+
   const results = [];
-  for (const item in from) {
-    if (from.hasOwnProperty) {
-      results.push(children(item));
+  for (const item in data) {
+    if (data.hasOwnProperty(item)) {
+      results.push(render(item));
     }
   }
 
