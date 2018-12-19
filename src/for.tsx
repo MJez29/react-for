@@ -1,23 +1,10 @@
 import * as React from "react";
 import { RenderArray } from "./render-array";
+import { RenderProps, IParsedRenderProps } from "./render-props";
 
-export interface IForProps {
-  /**
-   * The starting value of the loop.
-   */
-  start: any;
+export type ForProps<T> = RenderProps<T>;
 
-  /**
-   * The loop comparator. Loop breaks when it evaluates to a falsy value
-   */
-  comparator: (x: any) => any;
-
-  /**
-   * Function to calculate the next value in the loop
-   */
-  next: (x: any) => any;
-  children: (x: any) => React.Component<any, any>;
-}
+type ParsedForProps<T> = IParsedRenderProps<T>;
 
 export const For = ({ start, comparator, next, children }: IForProps) => {
   const results = [];
