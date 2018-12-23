@@ -18,7 +18,7 @@ export interface IParsedStartProps<T> {
   start: T;
 }
 
-export function parseRenderProps<T>(props: StartProps<T>): IParsedStartProps<T> {
+export function parseStartProps<T>(props: StartProps<T>): IParsedStartProps<T> {
   const parsedProps: IParsedStartProps<T> = {
     start: null,
   };
