@@ -13,4 +13,4 @@ describe("<For />", () => {
     );
     expect(wrapper).to.have.lengthOf(5);
   });
-})
+});

@@ -10,7 +10,7 @@ describe("<ForIn />", () => {
     const data = {
       a: 1,
       b: 2,
-      c: 3
+      c: 3,
     };
     const component = (
       <ForIn data={data}>{
@@ -51,4 +51,4 @@ describe("<ForIn />", () => {
     const s = shallow(component);
     expect(s.html()).to.equal("<div class=\"a\"><h1>Index: 0</h1><h2>Value: a</h2></div><div class=\"b\"><h1>Index: 1</h1><h2>Value: b</h2></div><div class=\"c\"><h1>Index: 2</h1><h2>Value: c</h2></div>");
   });
-})
+});

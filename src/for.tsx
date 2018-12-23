@@ -3,11 +3,11 @@ import { RenderArray } from "./render-array";
 import { RenderProps, IParsedRenderProps, parseRenderProps } from "./render-props";
 import { StartProps, IParsedStartProps, parseStartProps } from "./start-props";
 import { NextProps, IParsedNextProps, parseNextProps } from "./next-props";
-import { TestProps, parseTestProps } from "./test-props";
+import { TestProps, parseTestProps, IParsedTestProps } from "./test-props";
 
 export type ForProps<T> = RenderProps<T> & StartProps<T> & TestProps<T> & NextProps<T>;
 
-type ParsedForProps<T> = IParsedRenderProps<T> & IParsedStartProps<T> & TestProps<T> & IParsedNextProps<T>;
+type ParsedForProps<T> = IParsedRenderProps<T> & IParsedStartProps<T> & IParsedTestProps<T> & IParsedNextProps<T>;
 
 function parseForProps<T>(props: ForProps<T>): ParsedForProps<T> {
   return {
@@ -18,7 +18,7 @@ function parseForProps<T>(props: ForProps<T>): ParsedForProps<T> {
   };
 }
 
-export const For = <T extends {}>(props: ParsedForProps<T>) => {
+export const For = <T extends {}>(props: ForProps<T>) => {
   const { render, start, test, next } = parseForProps(props);
 
   const results = [];

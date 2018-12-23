@@ -6,10 +6,12 @@
         "tslint-react"
     ],
     "jsRules": {
-        "ordered-imports": false
+        "ordered-imports": false,
+        "trailing-comma": false
     },
     "rules": {
-        "ordered-imports": false
+        "ordered-imports": false,
+        "trailing-comma": false
     },
     "rulesDirectory": []
 }

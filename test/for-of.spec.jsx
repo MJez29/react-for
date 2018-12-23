@@ -47,7 +47,7 @@ describe("<ForOf />", () => {
     const s = shallow(component);
     expect(s.html()).to.equal("<h1>0</h1><h1>255</h1>");
   });
-  
+
   it("Loops through a Map", () => {
     const data = new Map([["a", 1], ["b", 2], ["c", 3]]);
     const component = (
@@ -75,4 +75,4 @@ describe("<ForOf />", () => {
     const s = shallow(component);
     expect(s.html()).to.equal("<h1>1</h1><h1>2</h1><h1>3</h1><h1>4</h1><h1>5</h1>");
   });
-})
+});
