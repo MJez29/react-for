@@ -7,12 +7,12 @@ import { WhileProps, parseWhileProps } from "./while-props";
  * @param { WhileProps } props - The props passed into the component
  */
 export const DoWhile = (props: WhileProps) => {
-  const { compare, render } = parseWhileProps(props);
+  const { test, render } = parseWhileProps(props);
 
   const results = [];
   do {
     results.push(render());
-  } while (compare());
+  } while (test());
 
   return <RenderArray array={results} />;
 };

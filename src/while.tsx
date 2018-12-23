@@ -15,10 +15,10 @@ import { WhileProps, parseWhileProps } from "./while-props";
  * )
  */
 export const While = (props: WhileProps) => {
-  const { compare, render } = parseWhileProps(props);
+  const { test, render } = parseWhileProps(props);
 
   const results = [];
-  while (compare()) {
+  while (test()) {
     results.push(render());
   }
 
