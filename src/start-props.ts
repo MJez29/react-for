@@ -5,7 +5,7 @@ interface IStart<T> {
 
 /**
  * @hidden
- * @param x 
+ * @param x
  */
 function isStart<T>(x: StartProps<T>): x is IStart<T> {
   return (x as IStart<T>).start !== undefined;
@@ -27,7 +27,7 @@ export interface IParsedStartProps<T> {
 
 /**
  * @hidden
- * @param props 
+ * @param props
  */
 export function parseStartProps<T>(props: StartProps<T>): IParsedStartProps<T> {
   const parsedProps: IParsedStartProps<T> = {

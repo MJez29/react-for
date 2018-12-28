@@ -8,7 +8,7 @@
     "build": "node scripts/clear-lib.js && tsc",
     "test": "mocha --require babel-core/register --require ./scripts/configure-adapter.js ./test/**/*.spec.jsx",
     "tests": "npm run build && npm run test",
-    "lint:src": "tslint -c tslint.json 'src/**/*.tsx'",
+    "lint:src": "tslint -c tslint.json 'src/*'",
     "lint:test": "tslint -c tslint.json 'test/**/*.jsx'",
     "lint": "npm run lint:src && npm run lint:test",
     "docs": "./node_modules/.bin/typedoc --out docs --name react-for --external-aliases external,hidden --mode file --readme ./README.md --target ES6 --module commonjs --theme markdown ./src/index.tsx"

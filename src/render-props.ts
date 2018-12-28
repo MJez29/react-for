@@ -6,7 +6,7 @@ interface IRenderChildren<T> {
 
 /**
  * @hidden
- * @param x 
+ * @param x
  */
 function isRenderChildren<T>(x: RenderProps<T>): x is IRenderChildren<T> {
   return (x as IRenderChildren<T>).children !== undefined;
