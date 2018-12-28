@@ -4,7 +4,7 @@
   "description": "A React component library to create loops in JSX",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "npm run tests && npm run lint && npm run docs",
     "build": "node scripts/clear-lib.js && tsc",
     "test": "mocha --require babel-core/register --require ./scripts/configure-adapter.js ./test/**/*.spec.jsx",
     "tests": "npm run build && npm run test",
