@@ -5,8 +5,14 @@ import { DataProps, IParsedDataProps, parseDataProps } from "./data-props";
 
 export type ForInProps = RenderProps<string> & DataProps<{ [x: string]: any }>;
 
+/**
+ * @hidden
+ */
 type ParsedForInProps = IParsedRenderProps<string> & IParsedDataProps<{ [x: string]: any }>;
 
+/**
+ * @hidden
+ */
 function parseForInProps(props: ForInProps): ParsedForInProps {
   return {
     ...parseDataProps(props),

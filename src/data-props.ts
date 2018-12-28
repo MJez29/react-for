@@ -10,6 +10,7 @@ interface IData<T> {
 
 /**
  * Returns true if data-related prop is the `data` prop
+ * @hidden
  * @param x - The data props to test
  */
 function isData<T>(x: DataProps<T>): x is IData<T> {
@@ -35,6 +36,7 @@ export type DataProps<T> = IData<T> | IFrom<T>;
 /**
  * The normalized schema that all the variations of `DataProps` get
  * mapped to.
+ * @hidden
  */
 export interface IParsedDataProps<T> {
   data: T;
@@ -42,6 +44,7 @@ export interface IParsedDataProps<T> {
 
 /**
  * Parses all variations of `DataProps` into a standard interface.
+ * @hidden
  * @param props - The props to parse
  */
 export function parseDataProps<T>(props: DataProps<T>): IParsedDataProps<T> {

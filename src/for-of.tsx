@@ -5,8 +5,15 @@ import { DataProps, parseDataProps, IParsedDataProps } from "./data-props";
 
 export type ForOfProps<T> = RenderProps<T> & DataProps<{ [Symbol.iterator]: () => T }>;
 
+/**
+ * @hidden
+ */
 type ParsedForOfProps<T> = IParsedRenderProps<T> & IParsedDataProps<any>;
 
+/**
+ * @hidden
+ * @param props
+ */
 function parseForOfProps<T>(props: ForOfProps<T>): ParsedForOfProps<T> {
   return {
     ...parseDataProps(props),

@@ -7,8 +7,15 @@ import { TestProps, parseTestProps, IParsedTestProps } from "./test-props";
 
 export type ForProps<T> = RenderProps<T> & StartProps<T> & TestProps<T> & NextProps<T>;
 
+/**
+ * @hidden
+ */
 type ParsedForProps<T> = IParsedRenderProps<T> & IParsedStartProps<T> & IParsedTestProps<T> & IParsedNextProps<T>;
 
+/**
+ * @hidden
+ * @param props
+ */
 function parseForProps<T>(props: ForProps<T>): ParsedForProps<T> {
   return {
     ...parseRenderProps(props),

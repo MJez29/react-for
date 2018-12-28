@@ -6,6 +6,10 @@ interface ITest<T> {
   compare?: undefined;
 }
 
+/**
+ * @hidden
+ * @param x
+ */
 function isTest<T>(x: TestProps<T>): x is ITest<T> {
   return (x as ITest<T>).test !== undefined;
 }
@@ -16,6 +20,10 @@ interface IComparator<T> {
   compare?: undefined;
 }
 
+/**
+ * @hidden
+ * @param x
+ */
 function isComparator<T>(x: TestProps<T>): x is IComparator<T> {
   return (x as IComparator<T>).comparator !== undefined;
 }
@@ -26,16 +34,27 @@ interface ICompare<T> {
   compare: TestFunction<T>;
 }
 
+/**
+ * @hidden
+ * @param x
+ */
 function isCompare<T>(x: TestProps<T>): x is ICompare<T> {
   return (x as ICompare<T>).compare !== undefined;
 }
 
 export type TestProps<T> = ITest<T> | IComparator<T> | ICompare<T>;
 
+/**
+ * @hidden
+ */
 export interface IParsedTestProps<T> {
   test: TestFunction<T>;
 }
 
+/**
+ * @hidden
+ * @param props
+ */
 export function parseTestProps<T>(props: TestProps<T>): IParsedTestProps<T> {
   const parsedProps: IParsedTestProps<T> = {
     test: null,

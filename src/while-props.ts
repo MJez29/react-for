@@ -3,6 +3,9 @@ import { TestFunction, parseTestProps, TestProps } from "./test-props";
 
 export type WhileProps = RenderProps & TestProps<undefined>;
 
+/**
+ * @hidden
+ */
 export interface IParsedWhileProps {
   test: TestFunction<undefined>;
   render: RenderFunction;
@@ -10,6 +13,7 @@ export interface IParsedWhileProps {
 
 /**
  * Parses the props for a while loop
+ * @hidden
  * @param props - The props to parse
  */
 export function parseWhileProps(props: WhileProps): IParsedWhileProps {

@@ -13,5 +13,3 @@ $ npm install --save react-for
 ```
 
 # Usage
-
-There are 5 looping structures

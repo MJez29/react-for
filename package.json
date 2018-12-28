@@ -10,7 +10,8 @@
     "tests": "npm run build && npm run test",
     "lint:src": "tslint -c tslint.json 'src/**/*.tsx'",
     "lint:test": "tslint -c tslint.json 'test/**/*.jsx'",
-    "lint": "npm run lint:src && npm run lint:test"
+    "lint": "npm run lint:src && npm run lint:test",
+    "docs": "./node_modules/.bin/typedoc --out docs --name react-for --external-aliases external,hidden --mode file --readme ./README.md --target ES6 --module commonjs --theme markdown ./src/index.tsx"
   },
   "keywords": [
     "for",
@@ -48,10 +49,15 @@
     "tslint": "^5.11.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
+    "typedoc": "^0.13.0",
+    "typedoc-plugin-markdown": "^1.1.20",
     "typescript": "^3.2.2"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "typedoc-plugin-internal-external": "^1.0.10"
   }
 }

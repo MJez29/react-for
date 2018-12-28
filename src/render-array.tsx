@@ -1,11 +1,15 @@
 import * as React from "react";
 
+/**
+ * @hidden
+ */
 interface IRenderArrayProps {
   array: JSX.Element[];
 }
 
 /**
  * Renders an array, attaching a key to each element corresponding to its index in the array
+ * @hidden
  */
 export const RenderArray = ({ array }: IRenderArrayProps) => (
   <React.Fragment>
