@@ -15,7 +15,7 @@ import { WhileProps, parseWhileProps } from "./while-props";
  * ```
  * @param props The props passed into the component
  */
-const While = (props: WhileProps) => {
+export const While = (props: WhileProps) => {
   const { test, render } = parseWhileProps(props);
 
   const results = [];
@@ -26,4 +26,3 @@ const While = (props: WhileProps) => {
   return <RenderArray array={results} />;
 };
 
-export default While;
