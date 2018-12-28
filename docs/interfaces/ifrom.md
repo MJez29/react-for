@@ -28,7 +28,7 @@ Interface of the data-related props when the object to use in the loop is passed
 
 **● data**: *`undefined`*
 
-*Defined in [data-props.ts:27](https://github.com/MJez29/react-for/blob/8eccd29/src/data-props.ts#L27)*
+*Defined in [data-props.ts:27](https://github.com/MJez29/react-for/blob/97cefad/src/data-props.ts#L27)*
 
 ___
 <a id="from"></a>
@@ -37,7 +37,7 @@ ___
 
 **● from**: *`T`*
 
-*Defined in [data-props.ts:26](https://github.com/MJez29/react-for/blob/8eccd29/src/data-props.ts#L26)*
+*Defined in [data-props.ts:26](https://github.com/MJez29/react-for/blob/97cefad/src/data-props.ts#L26)*
 
 ___
 

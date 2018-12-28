@@ -25,4 +25,3 @@ export const While = (props: WhileProps) => {
 
   return <RenderArray array={results} />;
 };
-
