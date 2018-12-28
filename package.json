@@ -1,6 +1,6 @@
 {
   "name": "react-for",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A React component library to create loops in JSX",
   "main": "lib/index.js",
   "scripts": {
