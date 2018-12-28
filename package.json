@@ -50,14 +50,12 @@
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
     "typedoc": "^0.13.0",
+    "typedoc-plugin-internal-external": "^1.0.10",
     "typedoc-plugin-markdown": "^1.1.20",
     "typescript": "^3.2.2"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
-  },
-  "dependencies": {
-    "typedoc-plugin-internal-external": "^1.0.10"
   }
 }
