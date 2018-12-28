@@ -4,14 +4,14 @@
   "description": "A React component library to create loops in JSX",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "npm run tests && npm run lint && npm run docs",
+    "prepare": "npm run tests && npm run lint && npm run docs && git add . && git commit -m \"Preparing package\"",
     "build": "node scripts/clear-lib.js && tsc",
     "test": "mocha --require babel-core/register --require ./scripts/configure-adapter.js ./test/**/*.spec.jsx",
     "tests": "npm run build && npm run test",
     "lint:src": "tslint -c tslint.json 'src/*'",
     "lint:test": "tslint -c tslint.json 'test/**/*.jsx'",
     "lint": "npm run lint:src && npm run lint:test",
-    "docs": "./node_modules/.bin/typedoc --out docs --name react-for --external-aliases external,hidden --mode file --readme ./README.md --target ES6 --module commonjs --theme markdown ./src/index.tsx"
+    "docs": "./node_modules/.bin/typedoc --out docs --name react-for --external-aliases external,hidden --mode file --readme ./base-readme.md --target ES6 --module commonjs --theme markdown ./src/index.tsx && node ./scripts/generate-readme.js"
   },
   "keywords": [
     "for",

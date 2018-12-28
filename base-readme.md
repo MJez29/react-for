@@ -16,4 +16,4 @@ $ npm install --save react-for
 
 # Docs
 
-<a id="docs"></a>Click to see full docs <a href="https://github.com/MJez29/react-for/tree/master/docs/README.md#docs">here</a>.
+<a id="docs"></a>
