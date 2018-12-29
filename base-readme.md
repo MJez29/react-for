@@ -28,12 +28,61 @@ for (let i = INITIAL_VALUE; TEST_EXPR; NEXT_OP) {
 ```
 Is equivalent to
 ```jsx
+import { For } from 'react-for';
 <For start={INITIAL_VALUE} comparator={i => TEST_EXPR} next={i => NEXT_OP}>{
   (i) => {
     CODE_TO_CREATE_COMPONENT;
     return component;
   }
 }</For>
+```
+
+## For Of
+
+The `ForOf` component emulates a for..of loop.
+
+```jsx
+const data = [ 1, 2, 3 ];
+const arr = [];
+for (const value of data) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { ForOf } from 'react-for';
+const data = [ 1, 2, 3 ];
+<ForOf data={data}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</ForOf>
+```
+
+## For In
+
+The `ForIn` component emulates a for..in loop.
+
+```jsx
+const data = [ 1, 2, 3 ];
+const arr = [];
+for (const value in data) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { ForOf } from 'react-for';
+const data = [ 1, 2, 3 ];
+<ForIn data={data}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</ForIn>
 ```
 
 # Docs
