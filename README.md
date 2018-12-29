@@ -14,6 +14,123 @@ $ npm install --save react-for
 
 # Usage
 
+All components require that you pass in a function to be called each loop.
+
+## For Loop
+
+The `For` component emulates a javascript for loop.
+```jsx
+const arr = [];
+for (let i = INITIAL_VALUE; TEST_EXPR; NEXT_OP) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { For } from 'react-for';
+<For start={INITIAL_VALUE} comparator={i => TEST_EXPR} next={i => NEXT_OP}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</For>
+```
+
+## For Of
+
+The `ForOf` component emulates a for..of loop.
+
+```jsx
+const data = [ 1, 2, 3 ];
+const arr = [];
+for (const value of data) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { ForOf } from 'react-for';
+const data = [ 1, 2, 3 ];
+<ForOf data={data}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</ForOf>
+```
+
+## For In
+
+The `ForIn` component emulates a for..in loop.
+
+```jsx
+const data = [ 1, 2, 3 ];
+const arr = [];
+for (const value in data) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { ForOf } from 'react-for';
+const data = [ 1, 2, 3 ];
+<ForIn data={data}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</ForIn>
+```
+
+## While
+
+The `While` component emulates a while loop.
+
+```jsx
+const arr = [];
+while (TEST_EXPR) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { While } from 'react-for';
+const data = [ 1, 2, 3 ];
+<While test={TEST_EXPR}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</While>
+```
+
+## Do While
+
+The `DoWhile` component emulates a do-while loop.
+
+```jsx
+const arr = [];
+do {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+} while (TEST_EXPR)
+```
+Is equivalent to
+```jsx
+import { DoWhile } from 'react-for';
+const data = [ 1, 2, 3 ];
+<DoWhile test={TEST_EXPR}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</DoWhile>
+```
+
 # Docs
 
 <a id="docs"></a>Click to see full docs <a href="https://github.com/MJez29/react-for/tree/master/docs/README.md#docs">here</a>.

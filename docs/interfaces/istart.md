@@ -25,7 +25,7 @@
 
 **● begin**: *`undefined`*
 
-*Defined in [start-props.ts:3](https://github.com/MJez29/react-for/blob/2671f07/src/start-props.ts#L3)*
+*Defined in [start-props.ts:3](https://github.com/MJez29/react-for/blob/d2a3e65/src/start-props.ts#L3)*
 
 ___
 <a id="start"></a>
@@ -34,7 +34,7 @@ ___
 
 **● start**: *`T`*
 
-*Defined in [start-props.ts:2](https://github.com/MJez29/react-for/blob/2671f07/src/start-props.ts#L2)*
+*Defined in [start-props.ts:2](https://github.com/MJez29/react-for/blob/d2a3e65/src/start-props.ts#L2)*
 
 ___
 
