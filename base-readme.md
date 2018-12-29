@@ -85,6 +85,52 @@ const data = [ 1, 2, 3 ];
 }</ForIn>
 ```
 
+## While
+
+The `While` component emulates a while loop.
+
+```jsx
+const arr = [];
+while (TEST_EXPR) {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+}
+```
+Is equivalent to
+```jsx
+import { While } from 'react-for';
+const data = [ 1, 2, 3 ];
+<While test={TEST_EXPR}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</While>
+```
+
+## Do While
+
+The `DoWhile` component emulates a do-while loop.
+
+```jsx
+const arr = [];
+do {
+  const component = CODE_TO_CREATE_COMPONENT;
+  arr.push(component);
+} while (TEST_EXPR)
+```
+Is equivalent to
+```jsx
+import { DoWhile } from 'react-for';
+const data = [ 1, 2, 3 ];
+<DoWhile test={TEST_EXPR}>{
+  (i) => {
+    CODE_TO_CREATE_COMPONENT;
+    return component;
+  }
+}</DoWhile>
+```
+
 # Docs
 
 <a id="docs"></a>
