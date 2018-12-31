@@ -200,7 +200,7 @@ Docs
 
 **Ƭ DataProps**: *[IData](interfaces/idata.md)<`T`> | [IFrom](interfaces/ifrom.md)<`T`>*
 
-*Defined in [data-props.ts:34](https://github.com/MJez29/react-for/blob/d2a3e65/src/data-props.ts#L34)*
+*Defined in [data-props.ts:34](https://github.com/MJez29/react-for/blob/4aac155/src/data-props.ts#L34)*
 
 The union of the various data-related prop interfaces.
 *__type__*: 
@@ -212,7 +212,7 @@ ___
 
 **Ƭ ForInProps**: *[RenderProps](#renderprops)<`string`> & [DataProps](#dataprops)<`object`>*
 
-*Defined in [for-in.tsx:6](https://github.com/MJez29/react-for/blob/d2a3e65/src/for-in.tsx#L6)*
+*Defined in [for-in.tsx:6](https://github.com/MJez29/react-for/blob/4aac155/src/for-in.tsx#L6)*
 
 ___
 <a id="forofprops"></a>
@@ -221,7 +221,7 @@ ___
 
 **Ƭ ForOfProps**: *[RenderProps](#renderprops)<`T`> & [DataProps](#dataprops)<`object`>*
 
-*Defined in [for-of.tsx:6](https://github.com/MJez29/react-for/blob/d2a3e65/src/for-of.tsx#L6)*
+*Defined in [for-of.tsx:6](https://github.com/MJez29/react-for/blob/4aac155/src/for-of.tsx#L6)*
 
 ___
 <a id="forprops"></a>
@@ -230,7 +230,7 @@ ___
 
 **Ƭ ForProps**: *[RenderProps](#renderprops)<`T`> & [StartProps](#startprops)<`T`> & [TestProps](#testprops)<`T`> & [NextProps](#nextprops)<`T`>*
 
-*Defined in [for.tsx:8](https://github.com/MJez29/react-for/blob/d2a3e65/src/for.tsx#L8)*
+*Defined in [for.tsx:8](https://github.com/MJez29/react-for/blob/4aac155/src/for.tsx#L8)*
 
 ___
 <a id="nextfunction"></a>
@@ -239,7 +239,7 @@ ___
 
 **Ƭ NextFunction**: *`function`*
 
-*Defined in [next-props.ts:1](https://github.com/MJez29/react-for/blob/d2a3e65/src/next-props.ts#L1)*
+*Defined in [next-props.ts:1](https://github.com/MJez29/react-for/blob/4aac155/src/next-props.ts#L1)*
 
 #### Type declaration
 ▸(x: *`T`*): `T`
@@ -259,7 +259,7 @@ ___
 
 **Ƭ NextProps**: *[INext](interfaces/inext.md)<`T`>*
 
-*Defined in [next-props.ts:7](https://github.com/MJez29/react-for/blob/d2a3e65/src/next-props.ts#L7)*
+*Defined in [next-props.ts:7](https://github.com/MJez29/react-for/blob/4aac155/src/next-props.ts#L7)*
 
 ___
 <a id="renderfunction"></a>
@@ -268,7 +268,7 @@ ___
 
 **Ƭ RenderFunction**: *`function`*
 
-*Defined in [render-props.ts:1](https://github.com/MJez29/react-for/blob/d2a3e65/src/render-props.ts#L1)*
+*Defined in [render-props.ts:1](https://github.com/MJez29/react-for/blob/4aac155/src/render-props.ts#L1)*
 
 #### Type declaration
 ▸(x?: *`T`*): `any`
@@ -288,7 +288,7 @@ ___
 
 **Ƭ RenderProps**: *[IRenderChildren](interfaces/irenderchildren.md)<`T`> | [IRenderFunction](interfaces/irenderfunction.md)<`T`>*
 
-*Defined in [render-props.ts:19](https://github.com/MJez29/react-for/blob/d2a3e65/src/render-props.ts#L19)*
+*Defined in [render-props.ts:19](https://github.com/MJez29/react-for/blob/4aac155/src/render-props.ts#L19)*
 
 ___
 <a id="startprops"></a>
@@ -297,7 +297,7 @@ ___
 
 **Ƭ StartProps**: *[IStart](interfaces/istart.md)<`T`> | [IBegin](interfaces/ibegin.md)<`T`>*
 
-*Defined in [start-props.ts:19](https://github.com/MJez29/react-for/blob/d2a3e65/src/start-props.ts#L19)*
+*Defined in [start-props.ts:19](https://github.com/MJez29/react-for/blob/4aac155/src/start-props.ts#L19)*
 
 ___
 <a id="testfunction"></a>
@@ -306,7 +306,7 @@ ___
 
 **Ƭ TestFunction**: *`function`*
 
-*Defined in [test-props.ts:1](https://github.com/MJez29/react-for/blob/d2a3e65/src/test-props.ts#L1)*
+*Defined in [test-props.ts:1](https://github.com/MJez29/react-for/blob/4aac155/src/test-props.ts#L1)*
 
 #### Type declaration
 ▸(x?: *`T`*): `any`
@@ -326,7 +326,7 @@ ___
 
 **Ƭ TestProps**: *[ITest](interfaces/itest.md)<`T`> | [IComparator](interfaces/icomparator.md)<`T`> | [ICompare](interfaces/icompare.md)<`T`>*
 
-*Defined in [test-props.ts:45](https://github.com/MJez29/react-for/blob/d2a3e65/src/test-props.ts#L45)*
+*Defined in [test-props.ts:45](https://github.com/MJez29/react-for/blob/4aac155/src/test-props.ts#L45)*
 
 ___
 <a id="whileprops"></a>
@@ -335,7 +335,7 @@ ___
 
 **Ƭ WhileProps**: *[RenderProps](#renderprops) & [TestProps](#testprops)<`undefined`>*
 
-*Defined in [while-props.ts:4](https://github.com/MJez29/react-for/blob/d2a3e65/src/while-props.ts#L4)*
+*Defined in [while-props.ts:4](https://github.com/MJez29/react-for/blob/4aac155/src/while-props.ts#L4)*
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 ▸ **DoWhile**(props: *[WhileProps](#whileprops)*): `Element`
 
-*Defined in [do-while.tsx:9](https://github.com/MJez29/react-for/blob/d2a3e65/src/do-while.tsx#L9)*
+*Defined in [do-while.tsx:9](https://github.com/MJez29/react-for/blob/4aac155/src/do-while.tsx#L9)*
 
 A do-while loop
 
@@ -366,7 +366,7 @@ ___
 
 ▸ **For**<`T`>(props: *[ForProps](#forprops)<`T`>*): `Element`
 
-*Defined in [for.tsx:28](https://github.com/MJez29/react-for/blob/d2a3e65/src/for.tsx#L28)*
+*Defined in [for.tsx:28](https://github.com/MJez29/react-for/blob/4aac155/src/for.tsx#L28)*
 
 **Type parameters:**
 
@@ -386,7 +386,7 @@ ___
 
 ▸ **ForIn**(props: *[ForInProps](#forinprops)*): `Element`
 
-*Defined in [for-in.tsx:33](https://github.com/MJez29/react-for/blob/d2a3e65/src/for-in.tsx#L33)*
+*Defined in [for-in.tsx:33](https://github.com/MJez29/react-for/blob/4aac155/src/for-in.tsx#L33)*
 
 `ForIn` implements looping through the provided elements using a `for...in` loop. It iterates over the enumerable properties of an object. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) for more detail.
 
@@ -405,7 +405,7 @@ ___
 
 ▸ **ForOf**<`T`>(props: *[ForOfProps](#forofprops)<`T`>*): `Element`
 
-*Defined in [for-of.tsx:34](https://github.com/MJez29/react-for/blob/d2a3e65/src/for-of.tsx#L34)*
+*Defined in [for-of.tsx:34](https://github.com/MJez29/react-for/blob/4aac155/src/for-of.tsx#L34)*
 
 `ForOf` implements looping through the provided elements using a `for...of` loop. It iterates over the data that an iterable object defines to be iterable over. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) for more detail.
 
@@ -427,7 +427,7 @@ ___
 
 ▸ **While**(props: *[WhileProps](#whileprops)*): `Element`
 
-*Defined in [while.tsx:18](https://github.com/MJez29/react-for/blob/d2a3e65/src/while.tsx#L18)*
+*Defined in [while.tsx:18](https://github.com/MJez29/react-for/blob/4aac155/src/while.tsx#L18)*
 
 A component that takes in a test function and calls a callback function that returns a react component while the test function continues to return true.
 
