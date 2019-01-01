@@ -7,7 +7,7 @@ const App = () => (
   <div className="App">
     <header className="App-header">
       <For start={0} compare={i => i < 5} next={i => i + 1}>{
-        (i) => <img src={logo} className="App-logo" alt="logo" />
+        (i) => <img src={logo} key={i} className="App-logo" alt="logo" />
       }</For>
     </header>
   </div>
