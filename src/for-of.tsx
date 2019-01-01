@@ -1,5 +1,4 @@
 import * as React from "react";
-import { RenderArray } from "./render-array";
 import { RenderProps, parseRenderProps, IParsedRenderProps } from "./render-props";
 import { DataProps, parseDataProps, IParsedDataProps } from "./data-props";
 
@@ -39,5 +38,5 @@ export const ForOf = <T extends {}>(props: ForOfProps<T>) => {
     results.push(render(item));
   }
 
-  return <RenderArray array={results} />;
+  return <>results</>;
 };

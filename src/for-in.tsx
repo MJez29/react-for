@@ -1,5 +1,4 @@
 import * as React from "react";
-import { RenderArray } from "./render-array";
 import { RenderProps, IParsedRenderProps, parseRenderProps } from "./render-props";
 import { DataProps, IParsedDataProps, parseDataProps } from "./data-props";
 
@@ -40,5 +39,5 @@ export const ForIn = (props: ForInProps) => {
     }
   }
 
-  return <RenderArray array={results} />;
+  return <>results</>;
 };
