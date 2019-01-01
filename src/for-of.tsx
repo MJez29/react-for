@@ -38,5 +38,5 @@ export const ForOf = <T extends {}>(props: ForOfProps<T>) => {
     results.push(render(item));
   }
 
-  return <>results</>;
+  return <>{results}</>;
 };

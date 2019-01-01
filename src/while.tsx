@@ -22,5 +22,5 @@ export const While = (props: WhileProps) => {
     results.push(render());
   }
 
-  return <>results</>;
+  return <>{results}</>;
 };

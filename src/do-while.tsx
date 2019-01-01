@@ -13,5 +13,5 @@ export const DoWhile = (props: WhileProps) => {
     results.push(render());
   } while (test());
 
-  return <>results</>;
+  return <>{results}</>;
 };

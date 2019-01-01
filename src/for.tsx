@@ -32,5 +32,5 @@ export const For = <T extends {}>(props: ForProps<T>) => {
     results.push(render(i));
   }
 
-  return <>results</>;
+  return <>{results}</>;
 };
