@@ -131,6 +131,29 @@ const data = [ 1, 2, 3 ];
 }</DoWhile>
 ```
 
+## Keying
+
+In React, a key prop should be attached to all components being rendered from a list. The key should be a string that is unique among all components in the list.
+
+```jsx
+// The following generates an ascii code table
+<table>
+  <tr>
+    <th>Ascii Code</th>
+    <th>Character</th>
+  </tr>
+  <For start={0} test={i => i < 256} next={i => i + 1}>{
+    (i) => (
+      <tr key={i}>
+        <td>{i}</td>
+        <td>{String.fromCharCode(i)}</td>
+      </tr>
+    )
+  }</For>
+</table>
+```
+
+
 # Docs
 
 <a id="docs"></a>
