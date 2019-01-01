@@ -21,7 +21,7 @@ describe("<DoWhile />", () => {
     let i;
     const component = (
       <DoWhile test={() => i > 0}>{
-        () => <h1>{i--}</h1>
+        () => <h1 key={i}>{i--}</h1>
       }</DoWhile>
     );
     i = 3;
