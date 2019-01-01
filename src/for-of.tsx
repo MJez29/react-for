@@ -1,14 +1,13 @@
 import * as React from "react";
-import { RenderArray } from "./render-array";
 import { RenderProps, parseRenderProps, IParsedRenderProps } from "./render-props";
 import { DataProps, parseDataProps, IParsedDataProps } from "./data-props";
 
-export type ForOfProps<T> = RenderProps<T> & DataProps<{ [Symbol.iterator]: () => T }>;
+export type ForOfProps<T> = RenderProps<T> & DataProps<{ [Symbol.iterator]: () => Iterator<T> }>;
 
 /**
  * @hidden
  */
-type ParsedForOfProps<T> = IParsedRenderProps<T> & IParsedDataProps<any>;
+type ParsedForOfProps<T> = IParsedRenderProps<T> & IParsedDataProps<{ [Symbol.iterator]: () => Iterator<T> }>;
 
 /**
  * @hidden
@@ -39,5 +38,5 @@ export const ForOf = <T extends {}>(props: ForOfProps<T>) => {
     results.push(render(item));
   }
 
-  return <RenderArray array={results} />;
+  return <>{results}</>;
 };

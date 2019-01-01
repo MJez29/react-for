@@ -1,5 +1,4 @@
 import * as React from "react";
-import { RenderArray } from "./render-array";
 import { RenderProps, IParsedRenderProps, parseRenderProps } from "./render-props";
 import { StartProps, IParsedStartProps, parseStartProps } from "./start-props";
 import { NextProps, IParsedNextProps, parseNextProps } from "./next-props";
@@ -33,5 +32,5 @@ export const For = <T extends {}>(props: ForProps<T>) => {
     results.push(render(i));
   }
 
-  return <RenderArray array={results} />;
+  return <>{results}</>;
 };

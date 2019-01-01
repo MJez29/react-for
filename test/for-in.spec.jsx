@@ -2,8 +2,8 @@
 // tslint:disable:max-line-length
 import * as React from "react";
 import { expect } from "chai";
-import { shallow, configure, render, mount } from "enzyme";
-import { ForOf, ForIn } from "../lib";
+import { shallow, render } from "enzyme";
+import { ForIn } from "../lib";
 
 describe("<ForIn />", () => {
   it("Loops through an object's keys", () => {
@@ -15,7 +15,7 @@ describe("<ForIn />", () => {
     const component = (
       <ForIn data={data}>{
         (k) => (
-          <div className={k}>
+          <div className={k} key={k}>
             <h1>Key: {k}</h1>
             <h2>Value: {data[k]}</h2>
           </div>
@@ -37,7 +37,7 @@ describe("<ForIn />", () => {
     const component = (
       <ForIn data={data}>{
         (i) => (
-          <div className={data[i]}>
+          <div className={data[i]} key={i}>
             <h1>Index: {i}</h1>
             <h2>Value: {data[i]}</h2>
           </div>

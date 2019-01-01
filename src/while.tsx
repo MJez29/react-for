@@ -1,5 +1,4 @@
 import * as React from "react";
-import { RenderArray } from "./render-array";
 import { WhileProps, parseWhileProps } from "./while-props";
 
 /**
@@ -23,5 +22,5 @@ export const While = (props: WhileProps) => {
     results.push(render());
   }
 
-  return <RenderArray array={results} />;
+  return <>{results}</>;
 };

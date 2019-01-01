@@ -21,7 +21,7 @@ describe("<While />", () => {
     let i;
     const component = (
       <While test={() => i > 0}>{
-        () => <h1>{i--}</h1>
+        () => <h1 key={i}>{i--}</h1>
       }</While>
     );
     i = 3;
