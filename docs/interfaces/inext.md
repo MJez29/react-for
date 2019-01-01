@@ -24,7 +24,7 @@
 
 **● next**: *[NextFunction](../#nextfunction)<`T`>*
 
-*Defined in [next-props.ts:4](https://github.com/MJez29/react-for/blob/4aac155/src/next-props.ts#L4)*
+*Defined in [next-props.ts:4](https://github.com/MJez29/react-for/blob/0d6ab00/src/next-props.ts#L4)*
 
 ___
 
