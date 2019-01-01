@@ -2,7 +2,7 @@
 // tslint:disable:max-line-length
 import * as React from "react";
 import { expect } from "chai";
-import { shallow, configure, render, mount } from "enzyme";
+import { shallow, render } from "enzyme";
 import { ForOf } from "../lib";
 
 describe("<ForOf />", () => {
@@ -10,7 +10,7 @@ describe("<ForOf />", () => {
     const data = [ 1, 2, 3, 4, 5 ];
     const component = (
       <ForOf from={data}>{
-        (i) => <h1>{i}</h1>
+        (i) => <h1 key={i}>{i}</h1>
       }</ForOf>
     );
     const r = render(component);
@@ -38,7 +38,7 @@ describe("<ForOf />", () => {
     const data = new Uint8Array([ 0x00, 0xFF ]);
     const component = (
       <ForOf from={data}>{
-        (i) => <h1>{i}</h1>
+        (i) => <h1 key={i}>{i}</h1>
       }</ForOf>
     );
     const r = render(component);
@@ -52,7 +52,7 @@ describe("<ForOf />", () => {
     const data = new Map([["a", 1], ["b", 2], ["c", 3]]);
     const component = (
       <ForOf from={data}>{
-        ([key, value]) => <h1>{key}: {value}</h1>
+        ([key, value]) => <h1 key={`${key}:${value}`}>{key}: {value}</h1>
       }</ForOf>
     );
     const r = render(component);
@@ -66,7 +66,7 @@ describe("<ForOf />", () => {
     const data = new Set([1, 1, 2, 3, 3, 4, 4, 5]);
     const component = (
       <ForOf from={data}>{
-        (e) => <h1>{e}</h1>
+        (e) => <h1 key={e}>{e}</h1>
       }</ForOf>
     );
     const r = render(component);
