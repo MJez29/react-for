@@ -6,7 +6,17 @@ import './App.css';
 
 const obj = {
   a: 4,
-  b: "hey"
+  b: "hey",
+  c: [
+    "foo",
+    7,
+    {
+      d: 5,
+      e: {},
+      f: false
+    }
+  ],
+  g: true
 }
 
 const App = () => (
