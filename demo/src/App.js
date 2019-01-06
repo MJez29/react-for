@@ -1,6 +1,6 @@
 import React from 'react';
 import { For } from 'react-for';
-import Object from "./object";
+import ObjectComponent from "./object";
 import logo from './logo.svg';
 import './App.css';
 import JSONFormatter from './json-formatter';

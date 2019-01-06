@@ -1,5 +1,5 @@
 import React from "react";
-import Object from "../object";
+import ObjectComponent from "../object";
 import String from "../string";
 import Number from "../number";
 import ArrayComponent from "../array";
@@ -8,7 +8,7 @@ import Boolean from "../boolean";
 const Type = ({ data }) => {
   switch (typeof data) {
     case "object":
-      return Array.isArray(data) ? <ArrayComponent data={data} /> : <Object data={data} />;
+      return Array.isArray(data) ? <ArrayComponent data={data} /> : <ObjectComponent data={data} />;
     case "string":
       return <String data={data} />;
     case "number":

@@ -10,7 +10,7 @@ const Array = ({ data }) => (
     <div className="array-entries">
       <ForOf data={data}>{
         (e) => (
-          <div className="array-entry">
+          <div className="array-entry" key={JSON.stringify(e)}>
             <Type data={e} />{
               e === data[data.length - 1] ? "" : ","
             }
