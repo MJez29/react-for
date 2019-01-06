@@ -2,8 +2,8 @@ import React from "react";
 
 import "./boolean.css";
 
-const Boolean = ({ data }) => (
+const BooleanComponent = ({ data }) => (
   <span className="boolean">{`${data}`}</span>
 );
 
-export default Boolean;
+export default BooleanComponent;

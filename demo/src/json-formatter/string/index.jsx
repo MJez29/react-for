@@ -2,8 +2,8 @@ import React from "react";
 
 import "./string.css";
 
-const String = ({ data }) => (
+const StringComponent = ({ data }) => (
   <span className="string">"{data}"</span>
 );
 
-export default String;
+export default StringComponent;

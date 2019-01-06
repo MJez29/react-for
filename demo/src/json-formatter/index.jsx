@@ -1,5 +1,5 @@
 import React from "react";
-import Type from "../type";
+import Type from "./type";
 
 import "./json-formatter.css";
 

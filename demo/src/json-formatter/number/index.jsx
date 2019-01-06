@@ -2,8 +2,8 @@ import React from "react";
 
 import "./number.css";
 
-const Number = ({ data }) => (
+const NumberComponent = ({ data }) => (
   <span className="number">{data}</span>
 );
 
-export default Number;
+export default NumberComponent;

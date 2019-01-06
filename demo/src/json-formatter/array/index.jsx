@@ -4,7 +4,7 @@ import "./array.css";
 import { ForOf } from "react-for";
 import Type from "../type";
 
-const Array = ({ data }) => (
+const ArrayComponent = ({ data }) => (
   <React.Fragment>
     <span>[</span>
     <div className="array-entries">
@@ -22,4 +22,4 @@ const Array = ({ data }) => (
   </React.Fragment>
 );
 
-export default Array;
+export default ArrayComponent;

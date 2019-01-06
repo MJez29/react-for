@@ -1,20 +1,20 @@
 import React from "react";
 import ObjectComponent from "../object";
-import String from "../string";
-import Number from "../number";
+import StringComponent from "../string";
+import NumberComponent from "../number";
 import ArrayComponent from "../array";
-import Boolean from "../boolean";
+import BooleanComponent from "../boolean";
 
 const Type = ({ data }) => {
   switch (typeof data) {
     case "object":
       return Array.isArray(data) ? <ArrayComponent data={data} /> : <ObjectComponent data={data} />;
     case "string":
-      return <String data={data} />;
+      return <StringComponent data={data} />;
     case "number":
-      return <Number data={data} />;
+      return <NumberComponent data={data} />;
     case "boolean":
-      return <Boolean data={data} />;
+      return <BooleanComponent data={data} />;
     default:
       throw new Error("Invalid type");
   }
