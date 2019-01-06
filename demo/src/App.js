@@ -1,9 +1,7 @@
 import React from 'react';
-import { For } from 'react-for';
-import ObjectComponent from "./object";
-import logo from './logo.svg';
 import './App.css';
 import JSONFormatter from './json-formatter';
+import JSONInput from './json-input';
 
 const obj = {
   a: 4,
@@ -22,6 +20,7 @@ const obj = {
 
 const App = () => (
   <div className="App">
+    <JSONInput onChange={() => null} />
     <JSONFormatter data={obj} />
   </div>
 );
