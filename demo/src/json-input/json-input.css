@@ -1,0 +1,15 @@
+.json-input {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.json-input textarea {
+  width: 80%;
+  height: 250px;
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+}
+
+.json-input textarea.invalid {
+  border: 1px solid red;
+}

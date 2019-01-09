@@ -1,16 +1,45 @@
 import React from 'react';
-import { For } from 'react-for';
-import logo from './logo.svg';
 import './App.css';
+import JSONFormatter from './json-formatter';
+import JSONInput from './json-input';
 
-const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <For start={0} compare={i => i < 5} next={i => i + 1}>{
-        (i) => <img src={logo} key={i} className="App-logo" alt="logo" />
-      }</For>
-    </header>
-  </div>
-);
+const obj = {
+  a: 4,
+  b: "hey",
+  c: [
+    "foo",
+    7,
+    {
+      d: 5,
+      e: {},
+      f: false
+    }
+  ],
+  g: true
+}
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      json: obj
+    };
+  }
+
+  onChange = (json) => {
+    this.setState({ json });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <JSONInput onChange={this.onChange} />
+        <JSONFormatter data={this.state.json} />
+      </div>
+    );
+  }
+}
 
 export default App;
