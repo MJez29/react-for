@@ -18,11 +18,28 @@ const obj = {
   g: true
 }
 
-const App = () => (
-  <div className="App">
-    <JSONInput onChange={() => null} />
-    <JSONFormatter data={obj} />
-  </div>
-);
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      json: obj
+    };
+  }
+
+  onChange = (json) => {
+    this.setState({ json });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <JSONInput onChange={this.onChange} />
+        <JSONFormatter data={this.state.json} />
+      </div>
+    );
+  }
+}
 
 export default App;
