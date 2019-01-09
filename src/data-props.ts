@@ -1,7 +1,6 @@
 /**
  * Interface of the data-related props when the object to
  * use in the loop is passed in the `data` prop
- * @interface
  */
 interface IData<T> {
   data: T;
@@ -20,7 +19,6 @@ function isData<T>(x: DataProps<T>): x is IData<T> {
 /**
  * Interface of the data-related props when the object to
  * use in the loop is passed in the `from` prop
- * @interface
  */
 interface IFrom<T> {
   from: T;
@@ -29,7 +27,6 @@ interface IFrom<T> {
 
 /**
  * The union of the various data-related prop interfaces.
- * @type
  */
 export type DataProps<T> = IData<T> | IFrom<T>;
 

@@ -5,11 +5,13 @@ import { DataProps, parseDataProps, IParsedDataProps } from "./data-props";
 export type ForOfProps<T> = RenderProps<T> & DataProps<{ [Symbol.iterator]: () => Iterator<T> }>;
 
 /**
+ * The type of the props that get passed into the `ForOf` component.
  * @hidden
  */
 type ParsedForOfProps<T> = IParsedRenderProps<T> & IParsedDataProps<{ [Symbol.iterator]: () => Iterator<T> }>;
 
 /**
+ * Parses all the variations of the `ForOfProps` into a standard interface.
  * @hidden
  * @param props
  */
