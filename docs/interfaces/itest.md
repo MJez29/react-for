@@ -26,7 +26,7 @@
 
 **● comparator**: *`undefined`*
 
-*Defined in [test-props.ts:9](https://github.com/MJez29/react-for/blob/4901e34/src/test-props.ts#L9)*
+*Defined in [test-props.ts:9](https://github.com/MJez29/react-for/blob/171c15c/src/test-props.ts#L9)*
 
 ___
 <a id="compare"></a>
@@ -35,7 +35,7 @@ ___
 
 **● compare**: *`undefined`*
 
-*Defined in [test-props.ts:10](https://github.com/MJez29/react-for/blob/4901e34/src/test-props.ts#L10)*
+*Defined in [test-props.ts:10](https://github.com/MJez29/react-for/blob/171c15c/src/test-props.ts#L10)*
 
 ___
 <a id="test"></a>
@@ -44,7 +44,7 @@ ___
 
 **● test**: *[TestFunction](../#testfunction)<`T`>*
 
-*Defined in [test-props.ts:8](https://github.com/MJez29/react-for/blob/4901e34/src/test-props.ts#L8)*
+*Defined in [test-props.ts:8](https://github.com/MJez29/react-for/blob/171c15c/src/test-props.ts#L8)*
 
 ___
 

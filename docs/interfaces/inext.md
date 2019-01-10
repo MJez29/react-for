@@ -26,7 +26,7 @@ Interface where the next function is passed through the `next` prop.
 
 **● next**: *[NextFunction](../#nextfunction)<`T`>*
 
-*Defined in [next-props.ts:10](https://github.com/MJez29/react-for/blob/4901e34/src/next-props.ts#L10)*
+*Defined in [next-props.ts:10](https://github.com/MJez29/react-for/blob/171c15c/src/next-props.ts#L10)*
 
 ___
 

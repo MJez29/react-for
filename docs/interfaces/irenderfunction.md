@@ -24,7 +24,7 @@
 
 **● render**: *[RenderFunction](../#renderfunction)<`T`>*
 
-*Defined in [render-props.ts:16](https://github.com/MJez29/react-for/blob/4901e34/src/render-props.ts#L16)*
+*Defined in [render-props.ts:16](https://github.com/MJez29/react-for/blob/171c15c/src/render-props.ts#L16)*
 
 ___
 
