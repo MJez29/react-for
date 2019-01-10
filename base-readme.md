@@ -153,6 +153,17 @@ In React, a key prop should be attached to all components being rendered from a 
 </table>
 ```
 
+# Prop Aliasing
+
+Currently the following prop aliases are supported. Create an issue to suggest others. The first prop of each row is the recommended alias and is used in all code examples.
+
+| Prop Type | Aliases |
+| --------- | ------- |
+| Data | `data`, `from` |
+| Next | `next` |
+| Render | `children`, `render` |
+| Start | `start`, `begin` |
+| Test | `test`, `comparator`, `compare` |
 
 # Docs
 

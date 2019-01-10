@@ -1,6 +1,9 @@
 import { RenderProps, RenderFunction, parseRenderProps } from "./render-props";
 import { TestFunction, parseTestProps, TestProps } from "./test-props";
 
+/**
+ * The type of the props passed to the `While` component.
+ */
 export type WhileProps = RenderProps & TestProps<undefined>;
 
 /**

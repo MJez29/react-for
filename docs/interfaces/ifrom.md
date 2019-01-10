@@ -3,7 +3,6 @@
 # Interface: IFrom
 
 Interface of the data-related props when the object to use in the loop is passed in the `from` prop
-*__interface__*: 
 
 ## Type parameters
 #### T 
@@ -28,7 +27,7 @@ Interface of the data-related props when the object to use in the loop is passed
 
 **● data**: *`undefined`*
 
-*Defined in [data-props.ts:27](https://github.com/MJez29/react-for/blob/0d6ab00/src/data-props.ts#L27)*
+*Defined in [data-props.ts:25](https://github.com/MJez29/react-for/blob/4901e34/src/data-props.ts#L25)*
 
 ___
 <a id="from"></a>
@@ -37,7 +36,7 @@ ___
 
 **● from**: *`T`*
 
-*Defined in [data-props.ts:26](https://github.com/MJez29/react-for/blob/0d6ab00/src/data-props.ts#L26)*
+*Defined in [data-props.ts:24](https://github.com/MJez29/react-for/blob/4901e34/src/data-props.ts#L24)*
 
 ___
 

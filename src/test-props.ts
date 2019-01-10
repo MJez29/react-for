@@ -1,3 +1,7 @@
+/**
+ * The type of the function that should be used to determine if a loop should stop. Returns a truthy
+ * value to continue and a falsy value to stop.
+ */
 export type TestFunction<T> = (x?: T) => any;
 
 interface ITest<T> {
@@ -42,6 +46,9 @@ function isCompare<T>(x: TestProps<T>): x is ICompare<T> {
   return (x as ICompare<T>).compare !== undefined;
 }
 
+/**
+ * The type of all valid sets of test props.
+ */
 export type TestProps<T> = ITest<T> | IComparator<T> | ICompare<T>;
 
 /**
