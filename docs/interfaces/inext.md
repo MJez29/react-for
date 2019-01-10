@@ -2,6 +2,8 @@
 
 # Interface: INext
 
+Interface where the next function is passed through the `next` prop.
+
 ## Type parameters
 #### T 
 ## Hierarchy
@@ -24,7 +26,7 @@
 
 **● next**: *[NextFunction](../#nextfunction)<`T`>*
 
-*Defined in [next-props.ts:4](https://github.com/MJez29/react-for/blob/0d6ab00/src/next-props.ts#L4)*
+*Defined in [next-props.ts:10](https://github.com/MJez29/react-for/blob/4901e34/src/next-props.ts#L10)*
 
 ___
 

@@ -172,6 +172,35 @@ In React, a key prop should be attached to all components being rendered from a 
 </table>
 ```
 
+Prop Aliasing
+=============
+
+Currently the following prop aliases are supported. Create an issue to suggest others. The first prop of each row is the recommended alias and is used in all code examples.
+
+Prop Type
+
+Aliases
+
+Data
+
+`data`, `from`
+
+Next
+
+`next`
+
+Render
+
+`children`, `render`
+
+Start
+
+`start`, `begin`
+
+Test
+
+`test`, `comparator`, `compare`
+
 Docs
 ====
 
@@ -223,10 +252,9 @@ Docs
 
 **Ƭ DataProps**: *[IData](interfaces/idata.md)<`T`> | [IFrom](interfaces/ifrom.md)<`T`>*
 
-*Defined in [data-props.ts:34](https://github.com/MJez29/react-for/blob/0d6ab00/src/data-props.ts#L34)*
+*Defined in [data-props.ts:31](https://github.com/MJez29/react-for/blob/4901e34/src/data-props.ts#L31)*
 
 The union of the various data-related prop interfaces.
-*__type__*: 
 
 ___
 <a id="forinprops"></a>
@@ -235,7 +263,9 @@ ___
 
 **Ƭ ForInProps**: *[RenderProps](#renderprops)<`string`> & [DataProps](#dataprops)<`object`>*
 
-*Defined in [for-in.tsx:5](https://github.com/MJez29/react-for/blob/0d6ab00/src/for-in.tsx#L5)*
+*Defined in [for-in.tsx:8](https://github.com/MJez29/react-for/blob/4901e34/src/for-in.tsx#L8)*
+
+The type of the props that get passed to the ForIn component.
 
 ___
 <a id="forofprops"></a>
@@ -244,7 +274,7 @@ ___
 
 **Ƭ ForOfProps**: *[RenderProps](#renderprops)<`T`> & [DataProps](#dataprops)<`object`>*
 
-*Defined in [for-of.tsx:5](https://github.com/MJez29/react-for/blob/0d6ab00/src/for-of.tsx#L5)*
+*Defined in [for-of.tsx:5](https://github.com/MJez29/react-for/blob/4901e34/src/for-of.tsx#L5)*
 
 ___
 <a id="forprops"></a>
@@ -253,7 +283,9 @@ ___
 
 **Ƭ ForProps**: *[RenderProps](#renderprops)<`T`> & [StartProps](#startprops)<`T`> & [TestProps](#testprops)<`T`> & [NextProps](#nextprops)<`T`>*
 
-*Defined in [for.tsx:7](https://github.com/MJez29/react-for/blob/0d6ab00/src/for.tsx#L7)*
+*Defined in [for.tsx:10](https://github.com/MJez29/react-for/blob/4901e34/src/for.tsx#L10)*
+
+The type of the props passed into the `For` component.
 
 ___
 <a id="nextfunction"></a>
@@ -262,7 +294,9 @@ ___
 
 **Ƭ NextFunction**: *`function`*
 
-*Defined in [next-props.ts:1](https://github.com/MJez29/react-for/blob/0d6ab00/src/next-props.ts#L1)*
+*Defined in [next-props.ts:4](https://github.com/MJez29/react-for/blob/4901e34/src/next-props.ts#L4)*
+
+The type of the function that is used to change the loop variable
 
 #### Type declaration
 ▸(x: *`T`*): `T`
@@ -282,7 +316,9 @@ ___
 
 **Ƭ NextProps**: *[INext](interfaces/inext.md)<`T`>*
 
-*Defined in [next-props.ts:7](https://github.com/MJez29/react-for/blob/0d6ab00/src/next-props.ts#L7)*
+*Defined in [next-props.ts:16](https://github.com/MJez29/react-for/blob/4901e34/src/next-props.ts#L16)*
+
+The union type of all possible next prop interfaces.
 
 ___
 <a id="renderfunction"></a>
@@ -291,7 +327,7 @@ ___
 
 **Ƭ RenderFunction**: *`function`*
 
-*Defined in [render-props.ts:1](https://github.com/MJez29/react-for/blob/0d6ab00/src/render-props.ts#L1)*
+*Defined in [render-props.ts:1](https://github.com/MJez29/react-for/blob/4901e34/src/render-props.ts#L1)*
 
 #### Type declaration
 ▸(x?: *`T`*): `any`
@@ -311,7 +347,7 @@ ___
 
 **Ƭ RenderProps**: *[IRenderChildren](interfaces/irenderchildren.md)<`T`> | [IRenderFunction](interfaces/irenderfunction.md)<`T`>*
 
-*Defined in [render-props.ts:19](https://github.com/MJez29/react-for/blob/0d6ab00/src/render-props.ts#L19)*
+*Defined in [render-props.ts:19](https://github.com/MJez29/react-for/blob/4901e34/src/render-props.ts#L19)*
 
 ___
 <a id="startprops"></a>
@@ -320,7 +356,7 @@ ___
 
 **Ƭ StartProps**: *[IStart](interfaces/istart.md)<`T`> | [IBegin](interfaces/ibegin.md)<`T`>*
 
-*Defined in [start-props.ts:19](https://github.com/MJez29/react-for/blob/0d6ab00/src/start-props.ts#L19)*
+*Defined in [start-props.ts:19](https://github.com/MJez29/react-for/blob/4901e34/src/start-props.ts#L19)*
 
 ___
 <a id="testfunction"></a>
@@ -329,7 +365,9 @@ ___
 
 **Ƭ TestFunction**: *`function`*
 
-*Defined in [test-props.ts:1](https://github.com/MJez29/react-for/blob/0d6ab00/src/test-props.ts#L1)*
+*Defined in [test-props.ts:5](https://github.com/MJez29/react-for/blob/4901e34/src/test-props.ts#L5)*
+
+The type of the function that should be used to determine if a loop should stop. Returns a truthy value to continue and a falsy value to stop.
 
 #### Type declaration
 ▸(x?: *`T`*): `any`
@@ -349,7 +387,9 @@ ___
 
 **Ƭ TestProps**: *[ITest](interfaces/itest.md)<`T`> | [IComparator](interfaces/icomparator.md)<`T`> | [ICompare](interfaces/icompare.md)<`T`>*
 
-*Defined in [test-props.ts:45](https://github.com/MJez29/react-for/blob/0d6ab00/src/test-props.ts#L45)*
+*Defined in [test-props.ts:52](https://github.com/MJez29/react-for/blob/4901e34/src/test-props.ts#L52)*
+
+The type of all valid sets of test props.
 
 ___
 <a id="whileprops"></a>
@@ -358,7 +398,9 @@ ___
 
 **Ƭ WhileProps**: *[RenderProps](#renderprops) & [TestProps](#testprops)<`undefined`>*
 
-*Defined in [while-props.ts:4](https://github.com/MJez29/react-for/blob/0d6ab00/src/while-props.ts#L4)*
+*Defined in [while-props.ts:7](https://github.com/MJez29/react-for/blob/4901e34/src/while-props.ts#L7)*
+
+The type of the props passed to the `While` component.
 
 ___
 
@@ -370,7 +412,7 @@ ___
 
 ▸ **DoWhile**(props: *[WhileProps](#whileprops)*): `Element`
 
-*Defined in [do-while.tsx:8](https://github.com/MJez29/react-for/blob/0d6ab00/src/do-while.tsx#L8)*
+*Defined in [do-while.tsx:8](https://github.com/MJez29/react-for/blob/4901e34/src/do-while.tsx#L8)*
 
 A do-while loop
 
@@ -389,16 +431,18 @@ ___
 
 ▸ **For**<`T`>(props: *[ForProps](#forprops)<`T`>*): `Element`
 
-*Defined in [for.tsx:27](https://github.com/MJez29/react-for/blob/0d6ab00/src/for.tsx#L27)*
+*Defined in [for.tsx:36](https://github.com/MJez29/react-for/blob/4901e34/src/for.tsx#L36)*
+
+A JSX implementation of the JavaScript `for` loop.
 
 **Type parameters:**
 
 #### T :  `__type`
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| props | [ForProps](#forprops)<`T`> |
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| props | [ForProps](#forprops)<`T`> |  The props passed to the component |
 
 **Returns:** `Element`
 
@@ -409,7 +453,7 @@ ___
 
 ▸ **ForIn**(props: *[ForInProps](#forinprops)*): `Element`
 
-*Defined in [for-in.tsx:32](https://github.com/MJez29/react-for/blob/0d6ab00/src/for-in.tsx#L32)*
+*Defined in [for-in.tsx:37](https://github.com/MJez29/react-for/blob/4901e34/src/for-in.tsx#L37)*
 
 `ForIn` implements looping through the provided elements using a `for...in` loop. It iterates over the enumerable properties of an object. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) for more detail.
 
@@ -428,7 +472,7 @@ ___
 
 ▸ **ForOf**<`T`>(props: *[ForOfProps](#forofprops)<`T`>*): `Element`
 
-*Defined in [for-of.tsx:33](https://github.com/MJez29/react-for/blob/0d6ab00/src/for-of.tsx#L33)*
+*Defined in [for-of.tsx:35](https://github.com/MJez29/react-for/blob/4901e34/src/for-of.tsx#L35)*
 
 `ForOf` implements looping through the provided elements using a `for...of` loop. It iterates over the data that an iterable object defines to be iterable over. See [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) for more detail.
 
@@ -450,9 +494,9 @@ ___
 
 ▸ **While**(props: *[WhileProps](#whileprops)*): `Element`
 
-*Defined in [while.tsx:17](https://github.com/MJez29/react-for/blob/0d6ab00/src/while.tsx#L17)*
+*Defined in [while.tsx:15](https://github.com/MJez29/react-for/blob/4901e34/src/while.tsx#L15)*
 
-A component that takes in a test function and calls a callback function that returns a react component while the test function continues to return true.
+A JSX implementation of a while loop.
 
 ```jsx
 const PrintHello = ({ i }) => (
